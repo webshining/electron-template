@@ -1,21 +1,16 @@
-const { app, BrowserWindow } = require('electron')
-const config = require('../config.json')
-require('./reloader')(__dirname)
+// Start auth-reloader
+const path = require('path')
+require('../scripts/reloader')(path.join(__dirname, '..'))
 
-let win = null
+const {app} = require('electron')
 
-const bootstrap = () => {
-    win = new BrowserWindow(config)
-    win.loadURL('https://github.com/webshining/electron-template')
-    win.on('ready-to-show', () => {
-        win.show()
-    })
-}
+const bootstrap = require('./bootstrap')
 
 app.on('ready', () => {
-    bootstrap()
+    const win = bootstrap()
+    win.loadURL('https://github.com/webshining/electron-template')
 })
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') app.quit()
+    if(process.platform !== 'darwin') app.quit()
 })
