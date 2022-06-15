@@ -7,6 +7,9 @@ const bootstrap = (cAtrs) => {
     win.on('ready-to-show', () => {
         win.show()
     })
+    win.on('close', () => {
+        
+    })
     return win
 }
 
