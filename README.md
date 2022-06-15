@@ -3,15 +3,33 @@
 * Custom auto-reloader
 * Config file with latest window state (position/size)
 
-## Start App:
+## Paragraphs:
+
+* [Getting started](#getting-started)
+  * [Init Project](#init-project)
+  * [Start Template](#start-template)
+  * [Start Test](#start-test)
+* [Configuration](#configuration)
+  * [Bootstrap](#bootstrap)
+## Getting started
+<hr>
+
+### Init Project:
 ```bash
 git clone https://github.com/webshining/electron-template project-name
 cd project-name
 npm i
-# If you are using WSL, please wrile: npm i --platform=win32
+# Write npm i --platform=win32 for start from wsl in windows
+```
+### Start Template:
+```bash
 npm start
 ```
-## Run test main:
+### Start Test:
 ```bash
 npm run test
 ```
+## Configuration
+<hr>
+
+### Bootstrap:
