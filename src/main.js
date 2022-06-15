@@ -1,4 +1,5 @@
-// Start auth-reloader
+'use strict'
+// Start electron-reloader
 const path = require('path')
 require('../scripts/reloader')(path.join(__dirname, '..'))
 

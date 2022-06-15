@@ -7,7 +7,6 @@
 
 * [Getting started](#getting-started)
   * [Init Project](#init-project)
-  * [Run](#run)
 * [Configuration](#configuration)
   * [Config file](#config-file)
   * [Bootstrap](#bootstrap)
@@ -27,7 +26,7 @@ npm start
 <hr>
 
 ### Config file:
-Config file have 2 element with settings
+Config file have 2 element with options:
 * DWindow - default window
 * LWindow - latest window
 ### Bootstrap:
