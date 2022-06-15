@@ -1,9 +1,15 @@
 {
-    "width": 1200,
-    "height": 800,
-    "show": false,
-    "webPreferences": {
-        "devTools": true,
-        "nodeIntegration": true
+    "DWindow": {
+        "width": 1200,
+        "height": 800,
+        "show": false,
+        "webPreferences": {
+            "devTools": true,
+            "nodeIntegration": true
+        }
+    },
+    "LWindow": {
+        "width": 1936,
+        "height": 1048
     }
 }
