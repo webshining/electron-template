@@ -4,8 +4,7 @@
   "description": "* Custom auto-reloader * Config file with latest window state (position/size)",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "electron test/main"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
