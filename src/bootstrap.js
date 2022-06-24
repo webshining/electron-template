@@ -9,9 +9,8 @@ const bootstrap = (cAtrs) => {
         win.show()
     })
     win.on('close', () => {
-        [width, height] = win.getSize()
-        config['LWindow'].width = width
-        config['LWindow'].height = height
+        bounds = win.getBounds()
+        config.LWindow = bounds
         updateConfig(config)
     })
     return win
