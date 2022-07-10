@@ -8,7 +8,7 @@ module.exports = function(path = '', fileTypes = []) {
         windows.push(bw)
     })
     const watcher = fs.watch(path, { encoding: 'utf8', recursive: true }, (event, file) => {
-        if (paths.resolve(file) !== module.parent.filename) {
+        if (paths.resolve(file) !== module.parent.filename && file !== 'config.json') {
             if (fileTypes.length === 0) {
                 windows.forEach(w => w.webContents.reloadIgnoringCache())
             } else {
