@@ -7,8 +7,8 @@ module.exports = function(path = '', fileTypes = []) {
     app.on('browser-window-created', (_, bw) => {
         windows.push(bw)
     })
-    fs.watch(path, { encoding: 'utf8', recursive: true }, (event, file) => {
-        if (paths.join(__dirname, file) !== module.parent.filename) {
+    const watcher = fs.watch(path, { encoding: 'utf8', recursive: true }, (event, file) => {
+        if (paths.resolve(file) !== module.parent.filename) {
             if (fileTypes.length === 0) {
                 windows.forEach(w => w.webContents.reloadIgnoringCache())
             } else {
@@ -19,6 +19,7 @@ module.exports = function(path = '', fileTypes = []) {
             }
         } else {
             console.log('Boot file changed, please restart app')
+            watcher.close()
             app.quit()
         }
     })
