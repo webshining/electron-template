@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/webshining/electron-template#readme",
   "devDependencies": {
-    "fs": "^0.0.1-security"
+    "electron": "^19.0.4"
   },
   "dependencies": {
-    "electron": "^19.0.4"
+    "fs": "^0.0.1-security"
   }
 }
