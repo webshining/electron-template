@@ -9,7 +9,6 @@
   * [Init Project](#init-project)
 * [Configuration](#configuration)
   * [Config file](#config-file)
-  * [Bootstrap](#bootstrap)
 ## Getting started
 <hr>
 
@@ -20,7 +19,6 @@ cd project-name
 npm i
 # Write npm i --platform=win32 for start from wsl in windows
 npm start
-# npm run test
 ```
 ## Configuration
 <hr>
@@ -29,5 +27,3 @@ npm start
 Config file have 2 element with options:
 * DWindow - default window
 * LWindow - latest window
-### Bootstrap:
->The ```bootstrap``` function has an optional argument of type ```Object```
