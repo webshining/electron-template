@@ -9,7 +9,6 @@ const bootstrap = require('./bootstrap')
 app.on('ready', () => {
     const win = bootstrap(null, true, true)
     win.loadURL('https://github.com/webshining/electron-template')
-    win.webContents.openDevTools()
 })
 
 app.on('window-all-closed', () => {
