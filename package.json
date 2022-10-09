@@ -2,9 +2,10 @@
   "name": "electron-avia",
   "version": "1.0.0",
   "description": "* Custom auto-reloader * Config file with latest window state (position/size)",
-  "main": "src/main.js",
+  "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron dist",
+    "start:dev": "cross-env NODE_ENV=dev electron src"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "electron": "^19.0.4"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "fs": "^0.0.1-security"
   }
 }
