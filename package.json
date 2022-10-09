@@ -1,26 +1,27 @@
 {
-  "name": "electron-avia",
-  "version": "1.0.0",
-  "description": "* Custom auto-reloader * Config file with latest window state (position/size)",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webshining/electron-template.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/webshining/electron-template/issues"
-  },
-  "homepage": "https://github.com/webshining/electron-template#readme",
-  "devDependencies": {
-    "electron": "^19.0.4"
-  },
-  "dependencies": {
-    "fs": "^0.0.1-security"
-  }
+    "name": "electron-template",
+    "version": "1.0.0",
+    "repository": "https://github.com/webshining/electron-template",
+    "author": "WebShining <webshinings@gmail.com>",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "scripts": {
+        "start": "npm run build && electron dist",
+        "start:dev": "concurrently --kill-other \"npm run build:watch\" \"cross-env NODE_ENV=dev npm run start\"",
+        "build": "tsc",
+        "build:watch": "tsc -w"
+    },
+    "devDependencies": {
+        "@types/electron": "^1.6.10",
+        "@types/node": "^18.8.3",
+        "concurrently": "^7.4.0",
+        "electron": "^21.1.0",
+        "fs": "^0.0.1-security",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "@types/dotenv": "^8.2.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.0.3"
+    }
 }
